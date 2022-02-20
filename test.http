@@ -22,4 +22,4 @@ PATCH http://localhost:8080/checkout?id=4
 
 ###
 
-PATCH http://localhost:8080/checkin?id=6
+PATCH http://localhost:8080/checkin?id=4
