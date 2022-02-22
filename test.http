@@ -1,12 +1,12 @@
-GET http://localhost:8080/books
+GET http://localhost:5000/api/books
 
 ###
 
-GET http://localhost:8080/books/4
+GET http://localhost:5000/api/books/4
 
 ###
 
-POST http://localhost:8080/books
+POST http://localhost:5000/api/books
 Content-Type: application/json
 
 {
@@ -18,8 +18,8 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:8080/checkout?id=4
+PATCH http://localhost:5000/api/checkout?id=4
 
 ###
 
-PATCH http://localhost:8080/checkin?id=4
+PATCH http://localhost:5000/api/checkin?id=4
