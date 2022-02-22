@@ -1,13 +1,14 @@
-GET http://localhost:5000/api/books
-
+GET http://localhost:8080/api/books
+X-API-Key: handshake
 ###
 
-GET http://localhost:5000/api/books/4
-
+GET http://localhost:8080/api/books/4
+X-API-Key: handshake
 ###
 
-POST http://localhost:5000/api/books
+POST http://localhost:8080/api/books
 Content-Type: application/json
+X-API-Key: handshake
 
 {
     "id": "4",
@@ -18,8 +19,10 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:5000/api/checkout?id=4
+PATCH http://localhost:8080/api/checkout?id=4
+X-API-Key: handshake
 
 ###
 
-PATCH http://localhost:5000/api/checkin?id=4
+PATCH http://localhost:8080/api/checkin?id=4
+X-API-Key: handshake

@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const url1 = 'http://localhost:5000/api/books';
+  const url1 = 'http://localhost:8080/api/books';
   const [books, setBooks] = useState([] as any[]);
   const [loading, setLoading] = useState(true);
 
   async function fetchBooks(){
-    const res = await fetch(url1, {method: 'GET'});
+    const res = await fetch(url1, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-API-Key': 'handshake'
+        }
+      });
     const data = await res.json();    
     if (res.ok) {
       console.log(data);
