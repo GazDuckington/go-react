@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/RegalOctopus/go-react/models"
 	// "github.com/gin-gonic/contrib/cors"
-	"github.com/gin-gonic/contrib/static"
+	// "github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
@@ -45,7 +45,7 @@ func CORS() gin.HandlerFunc {
 func main()	{
 	router := gin.Default()
 	router.Use(CORS())
-	router.Use(static.Serve("/", static.LocalFile("./frontend/dist", true)))
+	// router.Use(static.Serve("/", static.LocalFile("./frontend/dist", true)))
 	
 	api := router.Group("/api", authMiddleware())
 	{
